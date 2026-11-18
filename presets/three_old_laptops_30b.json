@@ -1,0 +1,43 @@
+{
+  "_generated_by": "gemini-ultra",
+  "cluster_name": "Three Old Laptops (16GB + 16GB + 8GB Gigabit LAN)",
+  "os_headroom_gib": 2.5,
+  "nodes": [
+    {
+      "name": "thinkpad-t480",
+      "host": "thinkpad-t480.local",
+      "rpc_port": 50052,
+      "role": "coordinator",
+      "ram_gib": 16.0,
+      "mem_bw_gbps": 32.0,
+      "compute_tflops": 1.2,
+      "link_type": "ethernet-1g",
+      "rtt_ms": 0.0,
+      "bandwidth_mbps": 10000.0
+    },
+    {
+      "name": "latitude-7490",
+      "host": "latitude-7490.local",
+      "rpc_port": 50052,
+      "role": "worker",
+      "ram_gib": 16.0,
+      "mem_bw_gbps": 32.0,
+      "compute_tflops": 1.2,
+      "link_type": "ethernet-1g",
+      "rtt_ms": 0.38,
+      "bandwidth_mbps": 940.0
+    },
+    {
+      "name": "macbook-air-m1",
+      "host": "macbook-air-m1.local",
+      "rpc_port": 50052,
+      "role": "worker",
+      "ram_gib": 8.0,
+      "mem_bw_gbps": 68.0,
+      "compute_tflops": 5.2,
+      "link_type": "ethernet-1g",
+      "rtt_ms": 0.35,
+      "bandwidth_mbps": 940.0
+    }
+  ]
+}

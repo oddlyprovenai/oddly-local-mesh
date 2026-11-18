@@ -1,0 +1,43 @@
+{
+  "_generated_by": "gemini-ultra",
+  "cluster_name": "Two Wired 16GB Laptops + One Slow 8GB Wi-Fi Notebook (Anti-Hype Demo)",
+  "os_headroom_gib": 2.5,
+  "nodes": [
+    {
+      "name": "thinkpad-wired-a",
+      "host": "thinkpad-a.local",
+      "rpc_port": 50052,
+      "role": "coordinator",
+      "ram_gib": 16.0,
+      "mem_bw_gbps": 38.0,
+      "compute_tflops": 1.8,
+      "link_type": "ethernet-1g",
+      "rtt_ms": 0.0,
+      "bandwidth_mbps": 10000.0
+    },
+    {
+      "name": "thinkpad-wired-b",
+      "host": "thinkpad-b.local",
+      "rpc_port": 50052,
+      "role": "worker",
+      "ram_gib": 16.0,
+      "mem_bw_gbps": 38.0,
+      "compute_tflops": 1.8,
+      "link_type": "ethernet-1g",
+      "rtt_ms": 0.35,
+      "bandwidth_mbps": 940.0
+    },
+    {
+      "name": "old-wifi-notebook",
+      "host": "old-wifi-notebook.local",
+      "rpc_port": 50052,
+      "role": "worker",
+      "ram_gib": 8.0,
+      "mem_bw_gbps": 12.0,
+      "compute_tflops": 0.5,
+      "link_type": "wifi-2.4ghz",
+      "rtt_ms": 38.0,
+      "bandwidth_mbps": 35.0
+    }
+  ]
+}

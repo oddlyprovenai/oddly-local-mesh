@@ -1,0 +1,27 @@
+# generated-by: gemini-ultra
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oddly-local-mesh"
+version = "0.1.0"
+description = "Honest LAN llama.cpp RPC layer planner, TCP micro-prober, and roofline speed simulator for multi-laptop local LLMs."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+authors = [
+  { name = "Oddly Proven", email = "noreply@oddlyproven.local" }
+]
+dependencies = []
+
+[project.scripts]
+local-mesh = "local_mesh.cli:main"
+oddly-local-mesh = "local_mesh.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

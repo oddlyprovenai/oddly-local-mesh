@@ -1,0 +1,31 @@
+# generated-by: gemini-ultra
+name: CI
+
+on:
+  push:
+    branches: ["main", "gemini/**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install pytest
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+      - name: Run pytest suite
+        run: PYTHONPATH=src python -m pytest -v
+      - name: Smoke test CLI planner and loopback benchmark
+        run: |
+          PYTHONPATH=src python -m local_mesh.cli plan --preset presets/three_old_laptops_30b.json --model 30b --quant Q4_K_M
+          PYTHONPATH=src python -m local_mesh.cli simulate-drop --preset presets/three_old_laptops_30b.json --drop macbook-air-m1 --model 30b --quant Q4_K_M
+          PYTHONPATH=src python -m local_mesh.cli bench --nodes 3 --iters 10 --slice-kb 128

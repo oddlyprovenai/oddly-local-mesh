@@ -1,0 +1,43 @@
+{
+  "_generated_by": "gemini-ultra",
+  "cluster_name": "Mac Studio 32GB + Two 16GB Mini-PCs (70B Home Lab)",
+  "os_headroom_gib": 2.5,
+  "nodes": [
+    {
+      "name": "mac-studio",
+      "host": "mac-studio.local",
+      "rpc_port": 50052,
+      "role": "coordinator",
+      "ram_gib": 32.0,
+      "mem_bw_gbps": 200.0,
+      "compute_tflops": 14.0,
+      "link_type": "ethernet-2.5g",
+      "rtt_ms": 0.0,
+      "bandwidth_mbps": 20000.0
+    },
+    {
+      "name": "mini-pc-a",
+      "host": "mini-pc-a.local",
+      "rpc_port": 50052,
+      "role": "worker",
+      "ram_gib": 16.0,
+      "mem_bw_gbps": 44.0,
+      "compute_tflops": 2.4,
+      "link_type": "ethernet-2.5g",
+      "rtt_ms": 0.28,
+      "bandwidth_mbps": 2350.0
+    },
+    {
+      "name": "mini-pc-b",
+      "host": "mini-pc-b.local",
+      "rpc_port": 50052,
+      "role": "worker",
+      "ram_gib": 16.0,
+      "mem_bw_gbps": 44.0,
+      "compute_tflops": 2.4,
+      "link_type": "ethernet-2.5g",
+      "rtt_ms": 0.30,
+      "bandwidth_mbps": 2350.0
+    }
+  ]
+}
